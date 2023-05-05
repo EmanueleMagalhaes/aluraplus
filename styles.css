@@ -1,0 +1,166 @@
+:root {
+    --branco-principal:#ffffff;
+    --cinza-segundario: #c0c0c0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter'; /*o link da font do google fontes está no index*/
+    --botao-azul-efeito: #6ca4e9; 
+}
+
+body {  /*tudo que coloco no body fica padrao para todo conteudo*/
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 18px; /*tamanho fonte*/
+    font-weight: 400; /*peso fonte*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png"); /* para colocar imagem de fundo*/
+    background-repeat: no-repeat; /*para a imagem do fundo não repetir*/
+    background-size: contain; /* para que a imagem preencha o contanier*/
+    align-items: center; /*alinha o bloco no centro da coluna*/
+    text-align: center; /* alinha o texto e imagens no centro*/
+}
+
+.container {
+    height: 100vh ;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 8px; /* arredondar os cantos */
+    padding: 1em; /* espacamento interno*/ 
+    color: var(--branco-principal);
+    display: block; /* para o botao ocupar todo espaço do bloco*/
+    text-decoration: none; /*retirar o sublinhado do link*/
+    margin-bottom: 1em; /*margim abaixo do botãp*/
+
+}
+.botao_secundario {
+    background-color: transparent; /*deixa o fundo do botao transparente*/
+    border: 1px solid var(--branco-principal); /* espessura da borda 1px solid linha não pontilhada e a cor*/
+
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-segundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0 ; /* colocar margem 1m superior, 0 dir, 2em inf, 0 esq*/
+}
+
+.container__caixa {
+    margin: 0 6em; /* margem 0 sup e inf, 6em direita e esquerda.*/
+}
+
+.secundario__imagem {
+    width: 80%; /*o tamanho que a imagem vai ocupar*/
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-segundario);
+    
+}
+
+.secundario__botao {
+    display: inline-block; /* exibe os itens em linha horizontal*/
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+
+.dispositivos_titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista {
+    display: flex; /* usei flex box para alinhar os itens lado a lado*/
+    justify-content: center ;
+    list-style-type: none; /* para retirar os pontinhos da lista sem estilo de lista*/
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo {
+    margin: 2em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{   /*seletor de classe em conjunto do elemento a */
+    padding: 15px;
+    text-decoration: none;
+    font-size: 16; 
+    color: var(--branco-principal);
+    margin-left: 1em;
+ 
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.rodape__texto{
+    color: var(--cinza-segundario);
+    font-size: 14px;
+    padding: 15px;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
